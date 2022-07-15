@@ -1,15 +1,14 @@
 pipeline {
-    agent any
+    agent { docker {}}
     stages {
         stage('build') {
             steps {
-                echo 'echo Build stage'
-                echo 'python main.py'
+                sh 'echo Build stage'
             }
         }
         stage('test') {
             steps {
-                echo 'echo Test stage'
+                sh 'echo Test stage'
             }
         }
     }
