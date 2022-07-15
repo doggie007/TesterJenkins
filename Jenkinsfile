@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'echo Build stage'
+                echo 'python main.py'
             }
         }
         stage('test') {
